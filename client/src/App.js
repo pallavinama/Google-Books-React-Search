@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Header</h1>
+        <h2>Heroku Display Test</h2>
       </header>
     </div>
   );
