@@ -65,13 +65,28 @@ class Search extends React.Component {
                     <input type="text" name="bookSearch" onChange={this.setInputChange}/>
                     </label>
                     <input type="submit" name="search" onClick={this.searchGoogleBook}/>
-                </form>                            
-                {this.state.books.map(book => {
-                    return(
-                        <ul>{book.volumeInfo.title}</ul>
-                    );
-                })
-                }
+                </form>
+
+                <table>
+                       <tr>
+                                        <th>Title</th>
+                                        <th>Authors</th>
+                                        <th>Description</th>
+                                    </tr>
+                                {this.state.books.map(book => {
+                                    return(
+                                        
+                                            <tr>
+                                                <td>{book.volumeInfo.title}</td>
+                                                <td>{book.volumeInfo.authors} </td>
+                                                <td>{book.volumeInfo.description} </td>
+                                               
+
+                                            </tr>                        
+                                    );
+                                })
+                                }
+                </table>                                
             </div>
         );
     }
